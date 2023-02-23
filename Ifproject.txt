@@ -1,0 +1,64 @@
+#!usr/bin/python3
+
+
+"""What is your favorite season? 
+        options are: 
+        Summer
+        Spring
+        Winter
+        Fall
+"""
+
+Summer = 0
+Spring = 0
+Winter = 0
+Fall = 0
+
+while True: 
+    answer = input('Do you prefer the cold or warmth? ')    
+
+    if answer.lower() == 'cold':    
+        Winter += 1
+        Fall += 1
+        break    
+    elif answer.lower() == 'warmth':
+        Summer += 1
+        Spring += 1
+        break 
+    else:            
+        print('You must answer with "cold" or "warmth".')
+while True:
+    answer = input('Do you like the rain? ')
+    
+    if answer.lower() == 'yes':    
+        Spring += 1
+        Fall += 1
+        break 
+    elif answer.lower() == 'no':
+        Winter += 1
+        Summer += 1
+        break
+    else:
+        print('Please answer with "yes" or "no".')    
+while True:
+    answer = input('Do you like to stay inside or outside? ')
+    
+    if answer.lower() == 'inside':   
+        Winter += 1
+        Spring += 1
+        break    
+    elif answer.lower() == 'outside':
+        Summer += 1
+        Fall += 1
+        break
+    else:
+        print('Please answer with "inside" or "outside"') 
+
+
+print(f""" 
+SCORES:
+Summer: {Summer}
+Spring: {Spring}
+Fall: {Fall}
+Winter: {Winter}
+""")
